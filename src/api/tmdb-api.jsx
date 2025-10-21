@@ -90,10 +90,12 @@ export const getMovie = (args) => {
   };
 
 
-  //for in class exam exercise 1: fetches trending movies today
+  //for in class exam exercise 1: fetches trending movies this week
 export const getTrendingThisWeek = () => {
+  const [, idPart] = args.queryKey;
+  const { id } = idPart;
   return fetch(
-    `https://api.themoviedb.org/3/trending/movie/${id}/this-week?api_key=${import.meta.env.VITE_TMDB_KEY}`
+    'https://api.themoviedb.org/3/trending/movie/${id}/week?api_key=${import.meta.env.VITE_TMDB_KEY}' 
   )
     .then((response) => {
       if (!response.ok) {
