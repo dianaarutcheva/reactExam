@@ -23,11 +23,15 @@ const SiteHeader = () => {
   
   const navigate = useNavigate();
 
+  
   const menuOptions = [
     { label: "Home", path: "/" },
     { label: "Favorites", path: "/movies/favorites" },
+     //exercise 1: "Trending This Week"
+    { label: "Trending This Week", path: "/movies/trending/this-week"},
     { label: "Option 3", path: "/" },
     { label: "Option 4", path: "/" },
+  
   ];
 
   const handleMenuSelect = (pageURL) => {
